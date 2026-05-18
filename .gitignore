@@ -1,0 +1,48 @@
+# Visual Studio / .NET
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+
+# Build outputs
+bin/
+obj/
+Debug/
+Debug*/
+release/
+**/bin/
+**/obj/
+
+# SQL Server Data Tools
+*.dacpac
+*.dbmdl
+*.publish.xml
+project.assets.json
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Logs and temp files
+*.log
+*.tmp
+*.cache
+*.bak
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.idea/
+
+# Local SQL scripts not part of model (optional)
+# Uncomment if you want to keep seed or local-only scripts out of source control
+# Scripts/Script.DummyInserts.sql
+
+# Misc
+*.vsconfig
+

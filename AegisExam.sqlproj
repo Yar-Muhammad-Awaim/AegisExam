@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="2.1.0" />
+  <PropertyGroup>
+    <Name>AegisExam</Name>
+    <ProjectGuid>{077DC649-7571-4B99-B47E-1FFDA63F43F2}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql170DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+  </PropertyGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+    <None Include="Scripts\Script.DummyInserts.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="Security" />
+    <Folder Include="Academic\Views" />
+    <Folder Include="Academic\StoredProcedures" />
+    <Folder Include="Academic\Triggers" />
+    <Folder Include="Exam\Views" />
+    <Folder Include="Exam\StoredProcedures" />
+    <Folder Include="Exam\Triggers" />
+    <Folder Include="Proctoring\Views" />
+    <Folder Include="Proctoring\StoredProcedures" />
+    <Folder Include="Proctoring\Triggers" />
+    <Folder Include="Disciplinary\Views" />
+    <Folder Include="Disciplinary\StoredProcedures" />
+    <Folder Include="Disciplinary\Triggers" />
+  </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+</Project>
