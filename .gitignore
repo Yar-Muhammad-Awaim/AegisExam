@@ -1,6 +1,5 @@
 # Visual Studio / .NET
 .vs/
-.vscode/
 *.user
 *.suo
 *.userosscache
@@ -46,3 +45,5 @@ Thumbs.db
 # Misc
 *.vsconfig
 
+config.bat
+node_modules

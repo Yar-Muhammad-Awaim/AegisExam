@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Aegis Exam &mdash; Project Viva Notes</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension zhuangtongfa.material-theme */
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body {
+  box-sizing: border-box;
+  min-width: 200px;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
+  background-color: initial;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+  color: initial;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code {
+  color: inherit;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre code {
+  color: initial;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body code > div, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body code > div, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body code > div, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code > div {
+  background: none;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table td {
+  border: 1px solid rgba(171, 178, 191, 0.5) !important;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body.showEditorSelection .code-active-line:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body.showEditorSelection .code-active-line:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body.showEditorSelection .code-active-line:before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-active-line:before {
+  border-left: none;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body.showEditorSelection .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body.showEditorSelection .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body.showEditorSelection .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-line:hover:before {
+  border-left: none;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body.showEditorSelection .code-line .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body.showEditorSelection .code-line .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body.showEditorSelection .code-line .code-line:hover:before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-line .code-line:hover:before {
+  border-left: none;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Generated from 'node_modules/github-markdown-css/github-markdown.css' */
+@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format("woff");
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: rgb(171, 178, 191);
+  line-height: 1.5;
+  word-wrap: break-word;
+  background: #282c34;
+  padding-top: 20px;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c {
+  color: #6a737d;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c1, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-v {
+  color: #005cc5;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-e, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-e, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-e, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-e, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-en {
+  color: #6f42c1;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-smi, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-smi, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-smi, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-smi, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-s1 {
+  color: #24292e;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ent, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ent, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ent, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ent {
+  color: #22863a;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-k, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-k, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-k, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-k {
+  color: #d73a49;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-pds, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-s .pl-pse .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-sre, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-sra, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-pds, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-s .pl-pse .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-sre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-sra, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-pds, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-s .pl-pse .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-sre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-sra, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-pds, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-pse .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-sre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-sra {
+  color: #032f62;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-smw, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-smw, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-smw, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-smw {
+  color: #e36209;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-bu, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-bu, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-bu, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-bu {
+  color: #b31d28;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ii, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ii, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ii, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-c2::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-c2::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-c2::before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c2::before {
+  content: "^M";
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: #22863a;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ml, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ml, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ml, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ml {
+  color: #735c0f;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mh, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mh .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ms, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mh, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mh .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ms, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mh, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mh .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ms, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mh, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mh .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ms {
+  font-weight: bold;
+  color: #005cc5;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mi, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mi, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mi, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mb, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mb, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mb, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mb {
+  font-weight: bold;
+  color: #24292e;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-md, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-md, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-md, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mi1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mi1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mi1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mc, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mc, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mc, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mi2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mi2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mi2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-mdr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-mdr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-mdr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mdr {
+  font-weight: bold;
+  color: #6f42c1;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-ba, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-ba, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-ba, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ba {
+  color: #586069;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-sg, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-sg, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-sg, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sg {
+  color: #959da5;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-corl, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-corl, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-corl, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a {
+  background-color: transparent;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:active, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:active, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:active, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:active, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:hover {
+  outline-width: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
+  font-weight: inherit;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
+  font-weight: bolder;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
+  margin: 0.67em 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img {
+  border-style: none;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
+  font: inherit;
+  margin: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
+  overflow: visible;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body [type=checkbox], .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body [type=checkbox], .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body [type=checkbox], .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body *, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body *, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body *, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body * {
+  box-sizing: border-box;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body input, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
+  font-family: inherit;
+  line-height: inherit;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a {
+  color: #528bff;
+  text-decoration: none;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:hover, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:hover {
+  text-decoration: underline;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body strong, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
+  font-weight: 600;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr::before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr::before {
+  display: table;
+  content: "";
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr::after, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr::after, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr::after, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body td, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body th, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body td, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body th, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body td, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body th, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body td, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body th {
+  padding: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
+  font-weight: 600;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 {
+  font-weight: 600;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3 {
+  font-weight: 600;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4 {
+  font-weight: 600;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5 {
+  font-weight: 600;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
+  font-weight: 600;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
+  margin: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol {
+  list-style-type: lower-roman;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dd, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dd, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dd, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dd {
+  margin-left: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .octicon, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .octicon {
+  vertical-align: text-bottom;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-0, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-0, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-0, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-0 {
+  padding-left: 0 !important;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-1 {
+  padding-left: 4px !important;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-2 {
+  padding-left: 8px !important;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-3, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-3, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-3, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-3 {
+  padding-left: 16px !important;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-4, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-4, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-4, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-4 {
+  padding-left: 24px !important;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-5, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-5, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-5, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-5 {
+  padding-left: 32px !important;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .pl-6, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .pl-6, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .pl-6, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-6 {
+  padding-left: 40px !important;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body::before, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body::before, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body::before {
+  display: table;
+  content: "";
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body::after, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body::after, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body::after, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body > *:first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body > *:first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body > *:first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body > *:first-child {
+  margin-top: 0 !important;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body > *:last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body > *:last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body > *:last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body > *:last-child {
+  margin-bottom: 0 !important;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body a:not([href]), .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body a:not([href]), .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body a:not([href]), .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .anchor:focus, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .anchor:focus, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .anchor:focus, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .anchor:focus {
+  outline: none;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
+  /* padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5; */
+  padding: 8.5px 17px;
+  margin: 1.5em 0;
+  color: #7c879c;
+  border-color: #4b5362;
+  border-width: 4px;
+  border-left: 5px solid #4b5362;
+  background: transparent;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote > :first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote > :first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote > :first-child, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote > :first-child {
+  margin-top: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body blockquote > :last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body blockquote > :last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body blockquote > :last-child, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote > :last-child {
+  margin-bottom: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: rgb(240, 240, 240);
+  border-bottom: none;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6:hover .anchor {
+  text-decoration: none;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h3:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h4:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h5:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h3:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h4:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h5:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h3:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h4:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h5:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
+  padding-bottom: 0.3em;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 {
+  padding-bottom: 0.3em;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body h6, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
+  color: #6a737d;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol {
+  padding-left: 2em;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body ol ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body ol ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ul, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body ol ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body li, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body li, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body li, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li {
+  word-wrap: break-all;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body li > p, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body li > p, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body li > p, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li > p {
+  margin-top: 16px;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body li + li, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body li + li, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body li + li, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li + li {
+  margin-top: 0.25em;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl {
+  padding: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl dt, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl dt, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl dt, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-style: italic;
+  font-weight: 600;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body dl dd, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body dl dd, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body dl dd, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th {
+  font-weight: 700;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body table td, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table td {
+  padding: 6px 13px;
+  /* border: 1px solid #dfe2e5; */
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  display: inline-block;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img[align=right], .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img[align=right], .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img[align=right], .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img[align=right] {
+  padding-left: 20px;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body img[align=left], .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body img[align=left], .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body img[align=left], .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img[align=left] {
+  padding-right: 20px;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  background-color: #3a3f4b;
+  border-radius: 3px;
+  color: white;
+  margin: 0 1px;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+  word-wrap: normal;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre > code, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre > code, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre > code, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre > code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .highlight, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .highlight, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .highlight, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight {
+  margin-bottom: 16px;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
+  padding: 16px;
+  overflow: auto;
+  line-height: 1.45;
+  /* background-color: #f6f8fa; */
+  border-radius: 3px;
+  background-color: #31363f;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body pre code, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+  color: rgb(171, 178, 191);
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .full-commit .btn-outline:not(:disabled):hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .full-commit .btn-outline:not(:disabled):hover, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .full-commit .btn-outline:not(:disabled):hover, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body :checked + .radio-label, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body :checked + .radio-label, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body :checked + .radio-label, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body :checked + .radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item {
+  list-style-type: none;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .task-list-item + .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .task-list-item + .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .task-list-item + .task-list-item, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item + .task-list-item {
+  margin-top: 3px;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body .task-list-item input, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body .task-list-item input, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body .task-list-item input, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"].vscode-body hr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
+  border-bottom-color: #eee;
+}
+
+/*
+
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+
+base:    #282c34
+mono-1:  #abb2bf
+mono-2:  #818896
+mono-3:  #5c6370
+hue-1:   #56b6c2
+hue-2:   #61aeee
+hue-3:   #c678dd
+hue-4:   #98c379
+hue-5:   #e06c75
+hue-5-2: #be5046
+hue-6:   #d19a66
+hue-6-2: #e6c07b
+
+*/
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #abb2bf;
+  background: #282c34;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-comment,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-quote, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-comment,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-quote, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-comment,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-quote, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-comment,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-quote {
+  color: #5c6370;
+  font-style: italic;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-doctag,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-keyword,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-formula, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-doctag,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-keyword,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-formula, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-doctag,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-keyword,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-formula, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-doctag,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-keyword,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-formula {
+  color: #c678dd;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-section,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-name,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-tag,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-deletion,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-subst, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-section,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-name,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-tag,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-deletion,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-subst, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-section,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-name,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-tag,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-deletion,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-subst, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-section,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-name,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-tag,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-deletion,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-subst {
+  color: #e06c75;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-literal, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-literal, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-literal, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-literal {
+  color: #56b6c2;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-string,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-regexp,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-addition,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-attribute,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-meta-string, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-string,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-regexp,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-addition,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-attribute,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-meta-string, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-string,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-regexp,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-addition,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-attribute,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-meta-string, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-string,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-regexp,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-addition,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-attribute,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-meta-string {
+  color: #98c379;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-built_in,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-class .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-built_in,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-class .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-built_in,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-class .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-built_in,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-class .hljs-title {
+  color: #e6c07b;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-attr,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-variable,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-template-variable,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-type,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-class,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-attr,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-pseudo,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-number, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-attr,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-variable,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-template-variable,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-type,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-class,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-attr,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-pseudo,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-number, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-attr,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-variable,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-template-variable,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-type,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-class,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-attr,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-pseudo,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-number, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-attr,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-variable,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-template-variable,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-type,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-class,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-attr,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-pseudo,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-number {
+  color: #d19a66;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-symbol,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-bullet,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-link,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-meta,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-selector-id,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-symbol,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-bullet,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-link,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-meta,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-selector-id,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-symbol,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-bullet,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-link,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-meta,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-selector-id,
+.vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-title, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-symbol,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-bullet,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-link,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-meta,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-id,
+.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-title {
+  color: #61aeee;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-emphasis, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-emphasis, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-emphasis, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-emphasis {
+  font-style: italic;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-strong, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-strong, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-strong {
+  font-weight: bold;
+}
+.vscode-dark[data-vscode-theme-name="One Dark Pro Mix"] .hljs-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Flat"] .hljs-link, .vscode-dark[data-vscode-theme-name="One Dark Pro Darker"] .hljs-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-link {
+  text-decoration: underline;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="aegis-exam--project-viva-notes">Aegis Exam — Project Viva Notes</h1>
+<p><strong>Academic Examination &amp; Remote Proctoring System</strong></p>
+<p>This document is the single reference for the viva. It maps the <strong>Project Description (Phase 1)</strong> → <strong>Enhanced ERD (Phase 2)</strong> → <strong>SQL scripts and database objects (Phases 3–4)</strong> so every claim in code can be defended against every claim in the description and the diagram.</p>
+<hr>
+<h2 id="1-project-at-a-glance">1. Project at a Glance</h2>
+<p>A centralized SQL Server database for running secure, proctored academic exams at a university.</p>
+<p>It covers four concerns:</p>
+<ol>
+<li><strong>Academic structure</strong> – University → Faculty → Department → Program → Course.</li>
+<li><strong>Course delivery</strong> – Semesters, course offerings, instructors, enrollments, waitlists, grades.</li>
+<li><strong>Assessment</strong> – Question banks, exams with sections, schedules, registrations, attempts, answers, results, score overrides.</li>
+<li><strong>Integrity</strong> – Proctoring telemetry (keystrokes, focus changes, clipboard), similarity comparisons, suspicious flags, disciplinary reviews, sanctions, appeals, appeal reviews.</li>
+</ol>
+<p>Cross-cutting concerns: <strong>Notification</strong> (in-app alerts) and <strong>Audit</strong> (immutable change log).</p>
+<p>The project is a Microsoft <code>.sqlproj</code> (SDK-style, target Sql170) — see <a href="AegisExam.sqlproj">AegisExam.sqlproj</a>.</p>
+<hr>
+<h2 id="2-schema-layout">2. Schema Layout</h2>
+<p>Defined in <a href="Security/Schemas.sql">Security/Schemas.sql</a>. Each logical concern has its own SQL schema for namespacing and easier permissioning:</p>
+<table>
+<thead>
+<tr>
+<th>Schema</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[Identity]</code></td>
+<td>People and their roles (Person, PersonRole, Student, Instructor, Admin)</td>
+</tr>
+<tr>
+<td><code>[Academic]</code></td>
+<td>Org structure + course delivery (University, Faculty, Department, Program, Semester, Course, CourseOffering, Enrollment, Waitlist, Grades, Rooms, Prerequisites)</td>
+</tr>
+<tr>
+<td><code>[QuestionBank]</code></td>
+<td>Banks, topics, questions, options, attachments</td>
+</tr>
+<tr>
+<td><code>[Exam]</code></td>
+<td>Exams, sections, exam-questions, schedules, rooms-on-schedule, invigilation, registrations, attempts, answers, score overrides, results, grade scale/band</td>
+</tr>
+<tr>
+<td><code>[Proctoring]</code></td>
+<td>Actions (and the 3 subtype tables), local action queue, similarity, suspicious flags</td>
+</tr>
+<tr>
+<td><code>[Disciplinary]</code></td>
+<td>Review → Sanction → Appeal → AppealReview</td>
+</tr>
+<tr>
+<td><code>[Notification]</code></td>
+<td>Outbound notifications to people</td>
+</tr>
+<tr>
+<td><code>[Audit]</code></td>
+<td>Immutable change/event log</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Why schemas? It mirrors the <strong>EER package boundaries</strong> in the diagram (Identity_Person, Academic_Course, Exam_Exam, etc.). The dotted prefix in the ERD names is the schema name.</p>
+</blockquote>
+<hr>
+<h2 id="3-entity-by-entity-walkthrough">3. Entity-by-Entity Walkthrough</h2>
+<p>For every table: <strong>purpose</strong>, <strong>key columns</strong>, <strong>constraints / business rules</strong> baked into the DDL. File paths are clickable.</p>
+<h3 id="31-identity-schema">3.1 Identity Schema</h3>
+<h4 id="person"><a href="Identity/Tables/Person.sql">Person</a></h4>
+<p>The supertype for every human in the system.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PersonId</code></td>
+<td>PK, IDENTITY</td>
+</tr>
+<tr>
+<td><code>FirstName</code></td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>LastName</code></td>
+<td>nullable</td>
+</tr>
+<tr>
+<td><code>Email</code></td>
+<td>UNIQUE, CHECK shape <code>%_@_%_.__%</code>, max 254</td>
+</tr>
+<tr>
+<td><code>PhoneNumber</code></td>
+<td>UNIQUE, only <code>0-9 + ( ) . - </code> characters</td>
+</tr>
+<tr>
+<td><code>DateOfBirth</code></td>
+<td>between 1920 and today</td>
+</tr>
+<tr>
+<td><code>NationalID</code></td>
+<td>UNIQUE (13-char)</td>
+</tr>
+<tr>
+<td><code>PasswordHash</code></td>
+<td>hashed credential</td>
+</tr>
+<tr>
+<td><code>CreatedAt</code></td>
+<td>defaults <code>GETDATE()</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why important:</strong> This is the <strong>specialization root</strong>. The ERD shows a <strong>disjoint specialization (<code>d</code>)</strong> from Person to Student / Instructor / Admin — meaning a Person can only be one of those three at one time in the role lookup, but technically the three subtype tables each FK back to Person and don't physically enforce disjointness. The logical disjointness lives in <code>[Identity].PersonRole</code>.</p>
+<h4 id="personrole"><a href="Identity/Tables/PersonRole.sql">PersonRole</a></h4>
+<p>Lookup of roles a Person holds. Composite PK <code>(PersonId, RoleType)</code>. CHECK restricts <code>RoleType</code> to <code>STUDENT | INSTRUCTOR | ADMIN</code>. Models the &quot;has_role&quot; relationship from the ERD.</p>
+<h4 id="student"><a href="Identity/Tables/Student.sql">Student</a></h4>
+<ul>
+<li>FK to Person, FK to <code>Academic.Program</code> (every student is enrolled in exactly one program — matches description: <em>&quot;every student must be enrolled in one specific program&quot;</em>).</li>
+<li><code>RollNumber</code> UNIQUE, <code>EnrollmentYear &gt; 1900</code>, <code>Status ∈ {ACTIVE, GRADUATED, SUSPENDED, DROPPED}</code>.</li>
+</ul>
+<h4 id="instructor"><a href="Identity/Tables/Instructor.sql">Instructor</a></h4>
+<ul>
+<li>FK to Person and <code>Academic.Department</code> (departments &quot;employ instructors&quot;).</li>
+<li><code>Title</code>, <code>IsActive</code> (default 1).</li>
+</ul>
+<h4 id="admin"><a href="Identity/Tables/Admin.sql">Admin</a></h4>
+<ul>
+<li>FK to Person. <code>RoleLevel ∈ {SUPER, DEPARTMENT, COURSE}</code>.</li>
+</ul>
+<hr>
+<h3 id="32-academic-schema-organisational--delivery">3.2 Academic Schema (Organisational + Delivery)</h3>
+<h4 id="university"><a href="Academic/Tables/University.sql">University</a></h4>
+<p>Top of the org tree. Holds country/timezone/website.</p>
+<h4 id="faculty"><a href="Academic/Tables/Faculty.sql">Faculty</a></h4>
+<p>FK to University. UNIQUE <code>(UniversityId, Code)</code> so two faculties in the same uni can't share a code.</p>
+<h4 id="department"><a href="Academic/Tables/Department.sql">Department</a></h4>
+<p>FK to Faculty. UNIQUE <code>(FacultyId, Code)</code>. Matches description: <em>&quot;Each faculty contains several departments.&quot;</em></p>
+<h4 id="program"><a href="Academic/Tables/Program.sql">Program</a></h4>
+<p>FK to Department. <code>DegreeLevel</code> (BACHELOR/MASTER/etc.) and <code>TotalCreditHours &gt; 0</code>. Matches: <em>&quot;Each department is responsible for offering various academic programs.&quot;</em></p>
+<h4 id="course"><a href="Academic/Tables/Course.sql">Course</a></h4>
+<p>FK to Department. UNIQUE <code>(DeptId, Code)</code> (e.g., CS101 within CS dept). Matches: <em>&quot;Departments maintain the catalog of courses.&quot;</em></p>
+<h4 id="courseprerequisite"><a href="Academic/Tables/CoursePrerequisite.sql">CoursePrerequisite</a></h4>
+<p>Composite PK <code>(CourseId, PrereqCourseId)</code>. Both FKs point back to Course (self-relationship). <code>MinGrade</code> is the minimum letter grade a student needed in the prerequisite. Matches: <em>&quot;A course can require other courses as prerequisites.&quot;</em></p>
+<h4 id="semester"><a href="Academic/Tables/Semester.sql">Semester</a></h4>
+<p>FK to University. UNIQUE <code>(UniversityId, Name)</code>. CHECK <code>EndDate &gt; StartDate</code>.</p>
+<h4 id="room"><a href="Academic/Tables/Room.sql">Room</a></h4>
+<p>Physical or virtual room. <code>IsVirtual</code> BIT (default 0). FK to University. Used by exams (<code>ExamRoom</code>).</p>
+<h4 id="courseoffering"><a href="Academic/Tables/CourseOffering.sql">CourseOffering</a></h4>
+<p>The fact table tying Course × Semester × Instructor. Has <code>Capacity</code> and <code>Status</code> (<code>OPEN</code>, <code>CLOSED</code>, etc.). Matches: <em>&quot;During a semester, a department schedules specific courses as course offerings. Each course offering is taught by a designated instructor.&quot;</em></p>
+<h4 id="enrollment"><a href="Academic/Tables/Enrollment.sql">Enrollment</a></h4>
+<p>Student × CourseOffering. UNIQUE <code>(OfferingId, StudentId)</code> prevents duplicate enrollments. <code>Status</code> tracks <code>ENROLLED / DROPPED / ...</code>.</p>
+<h4 id="coursewaitlist"><a href="Academic/Tables/CourseWaitlist.sql">CourseWaitlist</a></h4>
+<p>Same key idea as Enrollment but for waitlist. <code>Position</code> is an integer queue position. UNIQUE <code>(OfferingId, StudentId)</code>. Matches: <em>&quot;If a course offering reaches its maximum capacity, students are placed on a waitlist.&quot;</em></p>
+<h4 id="courseenrollmentgrade"><a href="Academic/Tables/CourseEnrollmentGrade.sql">CourseEnrollmentGrade</a></h4>
+<p>1-to-1 with Enrollment (<code>EnrollmentId</code> is both PK and FK). <code>LetterGrade</code>, <code>GradePoints</code>. Matches: <em>&quot;Upon completion of a course offering, the student receives a formal enrollment grade.&quot;</em></p>
+<hr>
+<h3 id="33-questionbank-schema">3.3 QuestionBank Schema</h3>
+<h4 id="questionbank"><a href="QuestionBank/Tables/QuestionBank.sql">QuestionBank</a></h4>
+<p>A department-scoped bank, created by an instructor. FK to Department and Instructor. Matches: <em>&quot;Instructors author and manage questions within department-specific question banks.&quot;</em></p>
+<h4 id="topic"><a href="QuestionBank/Tables/Topic.sql">Topic</a></h4>
+<p>Organizes a bank into named topics. UNIQUE <code>(BankId, Name)</code>. Matches: <em>&quot;These banks are organized into specific academic topics.&quot;</em></p>
+<h4 id="question"><a href="QuestionBank/Tables/Question.sql">Question</a></h4>
+<p>The reusable question. FK to Topic and the authoring Instructor. Has:</p>
+<ul>
+<li><code>Type</code> (MCQ, etc.), <code>QuestionText</code> (NVARCHAR(MAX))</li>
+<li><code>DefaultMarks &gt;= 0</code>, <code>NegativeMarks &lt;= 0</code> (CHECK constraints — negative marks are stored as ≤ 0 so the deduction is added)</li>
+<li><code>Difficulty</code>, <code>IsActive</code></li>
+</ul>
+<h4 id="questionoption"><a href="QuestionBank/Tables/QuestionOption.sql">QuestionOption</a></h4>
+<p>Multiple options per question. <code>IsCorrect</code> flags right answers. UNIQUE <code>(QuestionId, OrderNum)</code> keeps option order distinct.</p>
+<h4 id="questionattachment"><a href="QuestionBank/Tables/QuestionAttachment.sql">QuestionAttachment</a></h4>
+<p>Files attached to a question (images, PDFs). Matches: <em>&quot;Questions can have multiple options and file attachments.&quot;</em></p>
+<hr>
+<h3 id="34-exam-schema">3.4 Exam Schema</h3>
+<h4 id="gradescale"><a href="Exam/Tables/GradeScale.sql">GradeScale</a></h4>
+<p>A named grading scale (e.g., &quot;Standard 4.0&quot;), scoped to a university.</p>
+<h4 id="gradeband"><a href="Exam/Tables/GradeBand.sql">GradeBand</a></h4>
+<p>The bands inside a scale: letter grade + min/max percentage + GPA points. CHECK <code>0 ≤ MinPercentage ≤ MaxPercentage ≤ 100</code>.</p>
+<h4 id="exam"><a href="Exam/Tables/Exam.sql">Exam</a></h4>
+<p>Created by an instructor for a course offering. Carries <code>ExamType</code>, <code>DurationMinutes &gt; 0</code>, flags <code>IsRandomized</code>, <code>BrowserLockdown</code>, <code>OpenBook</code>, <code>NegativeMarking</code>, <code>Status</code>. FK to GradeScale used for final grading.</p>
+<h4 id="examsection"><a href="Exam/Tables/ExamSection.sql">ExamSection</a></h4>
+<p>A section within an exam (e.g., &quot;Section A&quot;). UNIQUE <code>(ExamId, OrderNum)</code>. Matches: <em>&quot;An exam is structured into distinct sections.&quot;</em></p>
+<h4 id="examquestion"><a href="Exam/Tables/ExamQuestion.sql">ExamQuestion</a></h4>
+<p>Joins ExamSection ↔ Question with order and per-exam marks override. UNIQUE on both <code>(SectionId, OrderNum)</code> and <code>(SectionId, QuestionId)</code> — no question repeats in a section, no two questions share an order number. Matches: <em>&quot;Each section contains a specific sequence of questions pulled from the question bank.&quot;</em></p>
+<h4 id="examschedule"><a href="Exam/Tables/ExamSchedule.sql">ExamSchedule</a></h4>
+<p>Date/time window + timezone for an exam.</p>
+<h4 id="examroom"><a href="Exam/Tables/ExamRoom.sql">ExamRoom</a></h4>
+<p>A specific room allocated to a specific schedule. <code>CapacityOverride</code> lets you reduce capacity below the room's real capacity.</p>
+<h4 id="invigilationassignment"><a href="Exam/Tables/InvigilationAssignment.sql">InvigilationAssignment</a></h4>
+<p>Instructor assigned to an ExamRoom (i.e., to invigilate). Matches: <em>&quot;Instructors are assigned to these rooms to supervise the exams.&quot;</em></p>
+<h4 id="examregistration"><a href="Exam/Tables/ExamRegistration.sql">ExamRegistration</a></h4>
+<p>Student registers for an Exam. UNIQUE <code>(StudentId, ExamId)</code>. <code>IsApproved</code> BIT and <code>Status</code>. Matches: <em>&quot;Students must register for an exam to participate.&quot;</em></p>
+<h4 id="attempt"><a href="Exam/Tables/Attempt.sql">Attempt</a></h4>
+<p>The actual sitting. FK to ExamRegistration (1 reg → many attempts possible). Records <code>StartTime</code>, <code>EndTime</code>, <code>IpAddress</code>, <code>BrowserInfo</code>, <code>OsInfo</code>, <code>Status</code>, <code>IsSubmitted</code>. FK to ExamRoom (where it was taken).</p>
+<h4 id="attemptanswer"><a href="Exam/Tables/AttemptAnswer.sql">AttemptAnswer</a></h4>
+<p>Per-question response inside an attempt. Holds <code>SelectedOptionId</code> (for MCQs), <code>TextAnswer</code>, <code>FilePath</code>, <code>MarksAwarded</code>, <code>IsCorrect</code>, <code>GradedBy</code>, <code>GradedAt</code>. Matches: <em>&quot;the student selects options or provides text answers ... These answers are then graded by an instructor or graded automatically.&quot;</em></p>
+<h4 id="scoreoverride"><a href="Exam/Tables/ScoreOverride.sql">ScoreOverride</a></h4>
+<p>Admin-driven override of a final score. FK to <code>Identity.Admin</code>. Carries a <code>Reason</code> (required NVARCHAR(MAX)). Triggers a sync into the Result (see Trigger §6).</p>
+<h4 id="result"><a href="Exam/Tables/Result.sql">Result</a></h4>
+<p>1:1 with Attempt (<code>UNIQUE AttemptId</code>). Holds <code>FinalScore</code>, <code>Percentage</code>, <code>GradeBandId</code> (resolved at grading time), <code>IsPublished</code>, <code>PublishedAt</code>. Matches: <em>&quot;producing a final calculated score and result for the attempt.&quot;</em></p>
+<hr>
+<h3 id="35-proctoring-schema">3.5 Proctoring Schema</h3>
+<h4 id="action--the-supertype"><a href="Proctoring/Tables/Action.sql">Action</a> — <em>the supertype</em></h4>
+<p>Every proctoring event tagged to an attempt. <code>ActionType</code> discriminator. UNIQUE <code>(AttemptId, SequenceNum)</code> so the client can deterministically order events.</p>
+<p>The three subtype tables share <code>ActionId</code> as PK + FK (specialization implemented as the <strong>&quot;PK = FK&quot;</strong> pattern, mirroring the disjoint specialization in the ERD):</p>
+<table>
+<thead>
+<tr>
+<th>Subtype</th>
+<th>Extra columns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Proctoring/Tables/KeystrokeAction.sql">KeystrokeAction</a></td>
+<td><code>KeyPressed</code>, <code>ModifierKeys</code></td>
+</tr>
+<tr>
+<td><a href="Proctoring/Tables/FocusChangeAction.sql">FocusChangeAction</a></td>
+<td><code>FromWindow</code>, <code>ToWindow</code>, <code>ProcessName</code></td>
+</tr>
+<tr>
+<td><a href="Proctoring/Tables/ClipboardAction.sql">ClipboardAction</a></td>
+<td><code>EventType</code> (COPY/PASTE), <code>ContentHash</code>, <code>ContentLength</code></td>
+</tr>
+</tbody>
+</table>
+<p>Matches: <em>&quot;the system continuously records proctoring actions, such as keystrokes, focus changes, and clipboard events.&quot;</em></p>
+<h4 id="localactionqueue"><a href="Proctoring/Tables/LocalActionQueue.sql">LocalActionQueue</a></h4>
+<p>Offline buffer for the proctoring agent. <code>ActionDataJson</code>, <code>QueuedAt</code>, <code>SyncedAt</code>, <code>IsSynced</code>, <code>RetryCount</code>. Lets the client push events even when temporarily offline.</p>
+<h4 id="similaritycomparison"><a href="Proctoring/Tables/SimilarityComparison.sql">SimilarityComparison</a></h4>
+<p>Pairwise comparison between two attempts. UNIQUE <code>(Attempt1Id, Attempt2Id)</code> plus CHECK <code>Attempt1Id &lt; Attempt2Id</code> so each pair is stored exactly once (no <code>(A,B)</code> and <code>(B,A)</code> duplicates). <code>SimilarityScore</code>, <code>Method</code>, <code>IsFlagged</code>. Matches: <em>&quot;The system compares different attempts to calculate similarity scores.&quot;</em></p>
+<h4 id="suspiciousflag"><a href="Proctoring/Tables/SuspiciousFlag.sql">SuspiciousFlag</a></h4>
+<p>A flag against an attempt. <code>Reason</code>, <code>FlaggedBy</code> (string — could be &quot;ProctoringService&quot; for the system or an actor), <code>Status</code>. Matches: <em>&quot;automatically generates flags for suspicious behavior.&quot;</em></p>
+<hr>
+<h3 id="36-disciplinary-schema">3.6 Disciplinary Schema</h3>
+<p>Four-stage pipeline: <strong>Review → Sanction → Appeal → AppealReview</strong>.</p>
+<h4 id="review"><a href="Disciplinary/Tables/Review.sql">Review</a></h4>
+<p>Instructor's review of an attempt. <code>Outcome</code> (<code>GUILTY</code>, <code>WARNING</code>, <code>CLEARED</code>, <code>NO_ACTION</code>, ...).</p>
+<h4 id="sanction"><a href="Disciplinary/Tables/Sanction.sql">Sanction</a></h4>
+<p>Issued in response to a Review. <code>SanctionType</code> (<code>ZERO_SCORE</code>, <code>WARNING</code>, <code>EXPULSION</code>, ...). <code>IsActive</code> lets us deactivate it on an overturned appeal.</p>
+<h4 id="appeal"><a href="Disciplinary/Tables/Appeal.sql">Appeal</a></h4>
+<p>Filed by a Student against a Sanction. <code>Status</code> (<code>PENDING</code>, <code>UNDER_REVIEW</code>, <code>APPROVED</code>, <code>REJECTED</code>, ...). <code>Reason</code> required.</p>
+<h4 id="appealreview"><a href="Disciplinary/Tables/AppealReview.sql">AppealReview</a></h4>
+<p>The final adjudication record. <code>Decision</code> (<code>UPHOLD</code>, <code>OVERTURN</code>, <code>PARTIAL</code>, ...). FK to the reviewing instructor.</p>
+<p>Matches: <em>&quot;an instructor conducts a disciplinary review. This review may result in a formal sanction against the student. If a sanction is issued, the student has the right to file an appeal, which is subsequently reviewed by an administrator or instructor for a final decision.&quot;</em></p>
+<hr>
+<h3 id="37-notification--audit">3.7 Notification &amp; Audit</h3>
+<h4 id="notification"><a href="Notification/Tables/Notification.sql">Notification</a></h4>
+<p>A message to a Person. <code>NotificationType</code>, <code>Channel</code> (<code>EMAIL</code>, <code>SMS</code>, <code>IN_APP</code>), <code>Subject</code>, <code>Body</code>, <code>SentAt</code>, <code>IsRead</code>.</p>
+<h4 id="auditlog"><a href="Audit/Tables/AuditLog.sql">AuditLog</a></h4>
+<p>Generic change log. <code>TableName</code>, <code>RecordId</code>, <code>ActionType</code> (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>PUBLISH</code>, <code>PUBLISH_REQUEST</code>, ...), <code>OldValue</code>, <code>NewValue</code> (both NVARCHAR(MAX) so we can stuff JSON), <code>PerformedBy</code> (FK to Person, nullable for system actions), <code>PerformedAt</code>, <code>IpAddress</code>.</p>
+<blockquote>
+<p><strong>Defensive answer for viva</strong> — these two aren't named explicitly in the project description but are demanded <em>implicitly</em>: results being published, appeals being decided, and integrity flags being raised all need to (a) notify the student and (b) leave an audit trail. The triggers in §6 actually wire those flows together.</p>
+</blockquote>
+<hr>
+<h2 id="4-mapping-the-description--erd--schema">4. Mapping the Description ↔ ERD ↔ Schema</h2>
+<table>
+<thead>
+<tr>
+<th>Business rule (from description)</th>
+<th>ERD entity / relationship</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>University consists of multiple faculties</td>
+<td><code>Academic_University</code> <code>has_faculty</code> (1:N) <code>Academic_Faculty</code></td>
+<td><code>Faculty.UniversityId</code> FK + UNIQUE <code>(UniversityId, Code)</code></td>
+</tr>
+<tr>
+<td>Each faculty has departments</td>
+<td><code>Academic_Faculty</code> <code>contains_dept</code> (1:N) <code>Academic_Department</code></td>
+<td><code>Department.FacultyId</code> FK</td>
+</tr>
+<tr>
+<td>Departments offer programs</td>
+<td><code>offers_program</code></td>
+<td><code>Program.DeptId</code> FK</td>
+</tr>
+<tr>
+<td>Every student in exactly one program</td>
+<td><code>enrolled_in_program</code> (1:N)</td>
+<td><code>Student.ProgramId</code> FK NOT NULL</td>
+</tr>
+<tr>
+<td>Departments own courses, employ instructors</td>
+<td><code>owns_course</code>, <code>employs_instructor</code></td>
+<td><code>Course.DeptId</code>, <code>Instructor.DeptId</code> FKs</td>
+</tr>
+<tr>
+<td>Course may require prerequisites</td>
+<td><code>requires_prereq</code> (recursive M:N)</td>
+<td><code>CoursePrerequisite</code> bridge table, self-referential</td>
+</tr>
+<tr>
+<td>University runs semesters</td>
+<td><code>runs_semester</code></td>
+<td><code>Semester.UniversityId</code> FK</td>
+</tr>
+<tr>
+<td>Course offerings during a semester, taught by an instructor</td>
+<td><code>schedules_offering</code>, <code>teaches</code>, <code>offered_as</code></td>
+<td><code>CourseOffering(CourseId, SemesterId, InstructorId)</code></td>
+</tr>
+<tr>
+<td>Students enroll, capacity → waitlist</td>
+<td><code>makes_enrollment</code>, <code>has_enrollment</code>, <code>has_waitlist</code></td>
+<td><code>Enrollment</code> + <code>CourseWaitlist</code>; SP enforces capacity (§5.1)</td>
+</tr>
+<tr>
+<td>Final enrollment grade</td>
+<td><code>yields_grade</code> (1:1)</td>
+<td><code>CourseEnrollmentGrade</code> PK = FK on <code>EnrollmentId</code></td>
+</tr>
+<tr>
+<td>Department-specific question banks</td>
+<td><code>maintains_bank</code> / <code>manages_bank</code></td>
+<td><code>QuestionBank.DeptId</code>, <code>CreatedBy</code> FKs</td>
+</tr>
+<tr>
+<td>Banks → topics → questions → options/attachments</td>
+<td><code>organizes_topic</code>, <code>categorizes_question</code>, <code>has_option</code>, <code>has_attachment</code></td>
+<td><code>Topic</code>, <code>Question</code>, <code>QuestionOption</code>, <code>QuestionAttachment</code></td>
+</tr>
+<tr>
+<td>Instructors create exams for offerings</td>
+<td><code>creates_exam</code>, <code>offering_has_exam</code></td>
+<td><code>Exam.OfferingId</code>, <code>Exam.CreatedBy</code> FKs</td>
+</tr>
+<tr>
+<td>Exam → sections → ordered questions</td>
+<td><code>divided_into</code>, <code>section_contains</code>, <code>used_in</code></td>
+<td><code>ExamSection</code>, <code>ExamQuestion</code></td>
+</tr>
+<tr>
+<td>Schedules + rooms + invigilators</td>
+<td><code>scheduled_in</code>, <code>allocated_to</code>, <code>room_used_in</code>, <code>supervised_by</code>, <code>invigilates</code></td>
+<td><code>ExamSchedule</code>, <code>ExamRoom</code>, <code>InvigilationAssignment</code></td>
+</tr>
+<tr>
+<td>Student registers, then attempts</td>
+<td><code>requires_reg</code>, <code>registers_for</code>, <code>generates_attempt</code>, <code>hosts_attempt</code></td>
+<td><code>ExamRegistration</code>, <code>Attempt</code></td>
+</tr>
+<tr>
+<td>Per-question answer, graded</td>
+<td><code>has_answer</code>, <code>answered_in</code>, <code>selected_as</code>, <code>graded_by</code></td>
+<td><code>AttemptAnswer</code></td>
+</tr>
+<tr>
+<td>Final score + result tied to a grade band</td>
+<td><code>produces_result</code>, <code>band_used_in</code></td>
+<td><code>Result</code> (1:1 attempt), <code>Result.GradeBandId</code></td>
+</tr>
+<tr>
+<td>Proctoring telemetry sub-types</td>
+<td><code>records_action</code> + EER specialization <code>d</code> on <code>Proctoring_Action</code></td>
+<td><code>Proctoring.Action</code> + 3 subtype tables (PK=FK pattern)</td>
+</tr>
+<tr>
+<td>Local action buffering for offline clients</td>
+<td><code>buffers_queue</code></td>
+<td><code>LocalActionQueue</code></td>
+</tr>
+<tr>
+<td>Similarity comparison + flags</td>
+<td><code>compared_in</code>, <code>triggers_flag</code></td>
+<td><code>SimilarityComparison</code>, <code>SuspiciousFlag</code></td>
+</tr>
+<tr>
+<td>Disciplinary review → sanction → appeal → appeal review</td>
+<td><code>undergoes_review</code>, <code>results_in</code>, <code>challenged_by</code>, <code>resolved_by</code></td>
+<td>4 tables in <code>[Disciplinary]</code></td>
+</tr>
+<tr>
+<td>(implicit) notifications, audit trail</td>
+<td><code>receives_notif</code>, audit relations</td>
+<td><code>Notification.Notification</code>, <code>Audit.AuditLog</code>; triggers fill these</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Specialization (EER) details:</strong></p>
+<ul>
+<li><code>Person</code> → {<code>Student</code>, <code>Instructor</code>, <code>Admin</code>} — disjoint (the <code>d</code> in the ERD). Logical disjointness enforced by <code>[Identity].PersonRole</code> keyed on <code>(PersonId, RoleType)</code> (you can have multiple roles in theory but the lookup keeps it explicit; subtype tables hold role-specific attributes).</li>
+<li><code>Action</code> → {<code>KeystrokeAction</code>, <code>FocusChangeAction</code>, <code>ClipboardAction</code>} — disjoint. Implemented with the <strong>PK = FK</strong> pattern: each subtype table's PK is also a FK to <code>Action.ActionId</code>.</li>
+</ul>
+<hr>
+<h2 id="5-stored-procedures-phase-4">5. Stored Procedures (Phase 4)</h2>
+<p>Five procedures, one per business workflow.</p>
+<h3 id="51-academicusp_enrollstudentincourseoffering">5.1 <code>[Academic].usp_EnrollStudentInCourseOffering</code></h3>
+<p><strong>File:</strong> <a href="Academic/StoredProcedures/usp_EnrollStudentInCourseOffering.sql">Academic/StoredProcedures/usp_EnrollStudentInCourseOffering.sql</a></p>
+<p><strong>What it does:</strong> End-to-end enrollment with capacity handling.</p>
+<p><strong>Steps &amp; guards:</strong></p>
+<ol>
+<li><code>THROW 50001</code> if student missing or not <code>ACTIVE</code>.</li>
+<li>Opens a transaction with <code>UPDLOCK, HOLDLOCK</code> on the offering row to prevent race-condition double-enrollments.</li>
+<li><code>THROW 50002</code> offering not found, <code>50003</code> not <code>OPEN</code>, <code>50004</code> already enrolled.</li>
+<li>Counts current <code>Enrollment</code> rows where <code>Status &lt;&gt; 'DROPPED'</code> (also with <code>UPDLOCK, HOLDLOCK</code>).</li>
+<li>If capacity reached → insert into <code>CourseWaitlist</code> with next position (returns <code>ActionTaken='WAITLISTED'</code>).</li>
+<li>If <code>50005</code> already waitlisted, throws.</li>
+<li>Otherwise inserts <code>Enrollment</code> with <code>Status='ENROLLED'</code> and returns <code>ActionTaken='ENROLLED'</code>.</li>
+</ol>
+<p><strong>Why two locks:</strong> Without <code>UPDLOCK + HOLDLOCK</code> two concurrent calls could each see &quot;1 seat left&quot; and both insert. Combined with the trigger in §6.1, accepting an enrollment also clears the waitlist row.</p>
+<h3 id="52-examusp_registerstudentforexam">5.2 <code>[Exam].usp_RegisterStudentForExam</code></h3>
+<p><strong>File:</strong> <a href="Exam/StoredProcedures/usp_RegisterStudentForExam.sql">Exam/StoredProcedures/usp_RegisterStudentForExam.sql</a></p>
+<p><strong>What it does:</strong> Atomically registers a student for an exam, only if they're enrolled in the underlying course offering.</p>
+<p><strong>Guards (<code>THROW 50011–50016</code>):</strong></p>
+<ul>
+<li>Student must exist and be <code>ACTIVE</code>.</li>
+<li>Exam must exist and <code>Status ∈ {SCHEDULED, OPEN}</code>.</li>
+<li>An <code>Enrollment</code> row must exist for (student, exam's offering) with <code>Status='ENROLLED'</code>.</li>
+<li>At least one active <code>ExamSchedule</code> must exist for that exam.</li>
+<li>No duplicate <code>ExamRegistration</code>.</li>
+</ul>
+<p>Returns the new <code>RegId</code>. <code>@AutoApprove</code> BIT defaults to 1.</p>
+<h3 id="53-examusp_publishexamresult">5.3 <code>[Exam].usp_PublishExamResult</code></h3>
+<p><strong>File:</strong> <a href="Exam/StoredProcedures/usp_PublishExamResult.sql">Exam/StoredProcedures/usp_PublishExamResult.sql</a></p>
+<p><strong>What it does:</strong> Marks a <code>Result</code> as published and audits the action.</p>
+<ul>
+<li><code>THROW 50021</code> if <code>@PublishedByPersonId</code> doesn't exist; <code>50022</code> if no Result exists for the attempt.</li>
+<li>Sets <code>IsPublished=1</code>, <code>PublishedAt=ISNULL(...,GETDATE())</code> (idempotent).</li>
+<li>Inserts an audit row <code>ActionType='PUBLISH_REQUEST'</code>.</li>
+</ul>
+<p>The downstream <strong>notification</strong> to the student is handled by the trigger in §6.2 — separating &quot;user action&quot; (audit) from &quot;side effect&quot; (notify) keeps the procedure body simple.</p>
+<h3 id="54-proctoringusp_recordsuspiciousflag">5.4 <code>[Proctoring].usp_RecordSuspiciousFlag</code></h3>
+<p><strong>File:</strong> <a href="Proctoring/StoredProcedures/usp_RecordSuspiciousFlag.sql">Proctoring/StoredProcedures/usp_RecordSuspiciousFlag.sql</a></p>
+<p><strong>What it does:</strong> Creates a <code>SuspiciousFlag</code> with <code>Status='OPEN'</code>.</p>
+<ul>
+<li><code>THROW 50031</code> if attempt not found; <code>50032</code> if reason is blank/whitespace.</li>
+<li><code>@FlaggedBy</code> defaults to <code>'ProctoringService'</code>.</li>
+<li>Returns the new <code>FlagId</code>. Trigger §6.4 then notifies the student and audits.</li>
+</ul>
+<h3 id="55-disciplinaryusp_submitappeal">5.5 <code>[Disciplinary].usp_SubmitAppeal</code></h3>
+<p><strong>File:</strong> <a href="Disciplinary/StoredProcedures/usp_SubmitAppeal.sql">Disciplinary/StoredProcedures/usp_SubmitAppeal.sql</a></p>
+<p><strong>What it does:</strong> Student files an appeal against a sanction.</p>
+<p><strong>Guards (<code>THROW 50041–50044</code>):</strong></p>
+<ul>
+<li><code>Reason</code> must be non-empty.</li>
+<li>Sanction must exist and be <code>IsActive=1</code>.</li>
+<li><strong>Cross-table integrity:</strong> verifies the student is actually the one tied to the sanction by walking <code>Sanction → Review → Attempt → ExamRegistration → StudentId</code>. This is the subtle business rule — you can't appeal <em>someone else's</em> sanction.</li>
+<li>No active appeal already exists (<code>PENDING</code> / <code>UNDER_REVIEW</code>).</li>
+</ul>
+<p>Inserts <code>Appeal</code> with <code>Status='PENDING'</code>.</p>
+<hr>
+<h2 id="6-triggers-phase-4">6. Triggers (Phase 4)</h2>
+<p>Five triggers, each wiring up a downstream side-effect to keep the data graph consistent.</p>
+<h3 id="61-academictr_enrollment_afterinsert_cleanupwaitlist">6.1 <code>[Academic].TR_Enrollment_AfterInsert_CleanupWaitlist</code></h3>
+<p><strong>File:</strong> <a href="Academic/Triggers/TR_Enrollment_AfterInsert_CleanupWaitlist.sql">Academic/Triggers/TR_Enrollment_AfterInsert_CleanupWaitlist.sql</a></p>
+<p>When a row is inserted into <code>Enrollment</code>:</p>
+<ol>
+<li>Deletes any matching <code>CourseWaitlist</code> row for <code>(OfferingId, StudentId)</code> (so the same student isn't on the waitlist AND enrolled).</li>
+<li>Re-numbers <code>Position</code> for everyone left on the waitlist for that offering, ordered by <code>Position ASC, RequestedAt ASC, WaitlistId ASC</code>, using a <code>ROW_NUMBER()</code> CTE. Keeps the queue dense (no holes).</li>
+</ol>
+<h3 id="62-examtr_result_afterinsertupdate_publishworkflow">6.2 <code>[Exam].TR_Result_AfterInsertUpdate_PublishWorkflow</code></h3>
+<p><strong>File:</strong> <a href="Exam/Triggers/TR_Result_AfterInsertUpdate_PublishWorkflow.sql">Exam/Triggers/TR_Result_AfterInsertUpdate_PublishWorkflow.sql</a></p>
+<p><code>AFTER INSERT, UPDATE</code> on <code>Result</code>:</p>
+<ol>
+<li>Backfills <code>PublishedAt = GETDATE()</code> if a row is now <code>IsPublished=1</code> but has no timestamp.</li>
+<li>Detects &quot;newly published&quot; results (was 0 or didn't exist, now 1) and sends an in-app <code>Notification</code> to the student, formatted with exam title + percentage.</li>
+<li>Writes an <code>Audit.AuditLog</code> row with <code>ActionType='PUBLISH'</code>.</li>
+</ol>
+<p>Uses two CTEs against <code>inserted</code>/<code>deleted</code> to detect the transition correctly.</p>
+<h3 id="63-examtr_scoreoverride_afterinsert_syncresult">6.3 <code>[Exam].TR_ScoreOverride_AfterInsert_SyncResult</code></h3>
+<p><strong>File:</strong> <a href="Exam/Triggers/TR_ScoreOverride_AfterInsert_SyncResult.sql">Exam/Triggers/TR_ScoreOverride_AfterInsert_SyncResult.sql</a></p>
+<p><code>AFTER INSERT</code> on <code>ScoreOverride</code>:</p>
+<ol>
+<li>For each affected attempt, picks the <strong>latest</strong> override (<code>ROW_NUMBER() OVER PARTITION BY AttemptId ORDER BY OverriddenAt DESC, OverrideId DESC</code>).</li>
+<li>Normalizes the new score to <code>[0, 100]</code>.</li>
+<li>Updates <code>Result.FinalScore</code>, <code>Result.Percentage</code>, and re-resolves <code>Result.GradeBandId</code> from the exam's <code>GradeScale</code> via <code>OUTER APPLY</code> finding the band where the score falls between <code>MinPercentage</code> and <code>MaxPercentage</code>.</li>
+<li>Audits the override.</li>
+</ol>
+<p>This is the trigger that keeps Result coherent with the most recent admin override.</p>
+<h3 id="64-proctoringtr_suspiciousflag_afterinsert_audit">6.4 <code>[Proctoring].TR_SuspiciousFlag_AfterInsert_Audit</code></h3>
+<p><strong>File:</strong> <a href="Proctoring/Triggers/TR_SuspiciousFlag_AfterInsert_Audit.sql">Proctoring/Triggers/TR_SuspiciousFlag_AfterInsert_Audit.sql</a></p>
+<p><code>AFTER INSERT</code> on <code>SuspiciousFlag</code>:</p>
+<ol>
+<li>Joins through <code>Attempt → ExamRegistration → Student → Person</code> to send the student an in-app notification (<code>PROCTORING_FLAG</code>).</li>
+<li>Audits the flag insertion.</li>
+</ol>
+<h3 id="65-disciplinarytr_appealreview_afterinsert_decisionworkflow">6.5 <code>[Disciplinary].TR_AppealReview_AfterInsert_DecisionWorkflow</code></h3>
+<p><strong>File:</strong> <a href="Disciplinary/Triggers/TR_AppealReview_AfterInsert_DecisionWorkflow.sql">Disciplinary/Triggers/TR_AppealReview_AfterInsert_DecisionWorkflow.sql</a></p>
+<p><code>AFTER INSERT</code> on <code>AppealReview</code>:</p>
+<ol>
+<li>Updates the parent <code>Appeal.Status</code> based on <code>Decision</code> (<code>OVERTURN→APPROVED</code>, <code>UPHOLD→REJECTED</code>, <code>PARTIAL→PARTIALLY_APPROVED</code>, else <code>UNDER_REVIEW</code>).</li>
+<li>If <code>Decision='OVERTURN'</code>, deactivates the parent <code>Sanction</code> (<code>IsActive=0</code>).</li>
+<li>Notifies the student.</li>
+<li>Audits the decision, resolving the reviewer's instructor → person to attribute it.</li>
+</ol>
+<hr>
+<h2 id="7-views-phase-4">7. Views (Phase 4)</h2>
+<p>Five denormalized read views — one per business &quot;screen&quot;.</p>
+<h3 id="71-academicvw_courseofferingcapacity">7.1 <code>[Academic].vw_CourseOfferingCapacity</code></h3>
+<p><strong>File:</strong> <a href="Academic/Views/vw_CourseOfferingCapacity.sql">Academic/Views/vw_CourseOfferingCapacity.sql</a></p>
+<p>Per offering: course code/name, semester, capacity, enrolled count (excluding <code>DROPPED</code>), waitlist count, <code>AvailableSeats</code>, computed <code>IsFull</code>, instructor info. Two CTEs (<code>EnrollmentStats</code>, <code>WaitlistStats</code>) feed a single SELECT. <strong>Use case:</strong> registrar / instructor dashboard.</p>
+<h3 id="72-academicvw_studentprogramprofile">7.2 <code>[Academic].vw_StudentProgramProfile</code></h3>
+<p><strong>File:</strong> <a href="Academic/Views/vw_StudentProgramProfile.sql">Academic/Views/vw_StudentProgramProfile.sql</a></p>
+<p>Flat one-row-per-student view joining <code>Student → Person + Program → Department → Faculty → University</code>. <strong>Use case:</strong> student profile lookup, ID card generation.</p>
+<h3 id="73-examvw_examresultledger">7.3 <code>[Exam].vw_ExamResultLedger</code></h3>
+<p><strong>File:</strong> <a href="Exam/Views/vw_ExamResultLedger.sql">Exam/Views/vw_ExamResultLedger.sql</a></p>
+<p>Per result: exam info, attempt, recorded result, <strong>latest</strong> override (via <code>OUTER APPLY ... TOP (1) ORDER BY OverriddenAt DESC</code>), and <code>EffectiveFinalScore = COALESCE(override, recorded)</code>. <strong>Use case:</strong> result ledger / transcript export.</p>
+<h3 id="74-proctoringvw_attemptriskoverview">7.4 <code>[Proctoring].vw_AttemptRiskOverview</code></h3>
+<p><strong>File:</strong> <a href="Proctoring/Views/vw_AttemptRiskOverview.sql">Proctoring/Views/vw_AttemptRiskOverview.sql</a></p>
+<p>Per attempt: action count, total/open flags, last flagged time, plus a computed <code>RiskLevel</code> (<code>HIGH</code> if open flags &gt; 0 or total flags ≥ 3, <code>MEDIUM</code> if total = 2 or action count ≥ 15, else <code>LOW</code>). <strong>Use case:</strong> proctoring triage dashboard.</p>
+<h3 id="75-disciplinaryvw_appealcaseoverview">7.5 <code>[Disciplinary].vw_AppealCaseOverview</code></h3>
+<p><strong>File:</strong> <a href="Disciplinary/Views/vw_AppealCaseOverview.sql">Disciplinary/Views/vw_AppealCaseOverview.sql</a></p>
+<p>Per appeal: sanction info, originating review, student, plus the <strong>latest</strong> <code>AppealReview</code> (again via <code>OUTER APPLY</code>). <strong>Use case:</strong> disciplinary committee work-queue.</p>
+<hr>
+<h2 id="8-dummy-data-scripts">8. Dummy Data Scripts</h2>
+<p>Two scripts, both included in the <code>.sqlproj</code>:</p>
+<h3 id="81-scriptsscriptpostdeploymentsql">8.1 <a href="Scripts/Script.PostDeployment.sql">Scripts/Script.PostDeployment.sql</a></h3>
+<p>Idempotent <code>MERGE</code> statements — runs after every publish. <strong>Heads-up for viva:</strong> this file has a long-standing typo where many schemas are written as <code>[Identity.Student]</code> instead of <code>[Identity].Student</code>. If you run <em>just this</em> it will fail. The clean version is <code>DummyInserts.sql</code>.</p>
+<blockquote>
+<p>Be honest if asked: PostDeployment is the <em>intent</em>, DummyInserts is what actually runs cleanly.</p>
+</blockquote>
+<h3 id="82-scriptsscriptdummyinsertssql">8.2 <a href="Scripts/Script.DummyInserts.sql">Scripts/Script.DummyInserts.sql</a></h3>
+<p><code>SET IDENTITY_INSERT ... ON</code> + <code>INSERT INTO</code> blocks, schema by schema, in <strong>dependency order</strong> (parents before children) so all FKs resolve:</p>
+<ol>
+<li>Academic core: University → Faculty → Department → Program</li>
+<li>Identity: Person → PersonRole → Student / Instructor / Admin</li>
+<li>Course catalog: Course → Semester → Room → CourseOffering → Enrollment → CourseEnrollmentGrade → CoursePrerequisite → CourseWaitlist</li>
+<li>Grading scaffold: GradeScale → GradeBand</li>
+<li>QuestionBank: QuestionBank → Topic → Question → QuestionOption → QuestionAttachment</li>
+<li>Exam: Exam → ExamSection → ExamQuestion → ExamSchedule → ExamRoom → ExamRegistration → Attempt → AttemptAnswer → Result → ScoreOverride → InvigilationAssignment</li>
+<li>Proctoring: Action → ClipboardAction / FocusChangeAction / KeystrokeAction → LocalActionQueue → SimilarityComparison → SuspiciousFlag</li>
+<li>Disciplinary: Review → Sanction → Appeal → AppealReview</li>
+<li>Notification, Audit</li>
+</ol>
+<p>Each block toggles <code>IDENTITY_INSERT</code> on, inserts 1–5 rows, toggles it off.</p>
+<hr>
+<h2 id="9-likely-viva-questions--crisp-answers">9. Likely Viva Questions &amp; Crisp Answers</h2>
+<p><strong>Q: Why split into so many schemas?</strong>
+A: It mirrors the ERD packages and gives us natural namespaces — e.g. <code>[Exam].Exam</code> reads as &quot;the Exam table in the Exam module&quot;. Easier permissioning later (you can <code>GRANT</code> on a schema).</p>
+<p><strong>Q: Where is generalization implemented?</strong>
+A: Two places. (1) <code>Identity.Person</code> is generalized into <code>Student</code>, <code>Instructor</code>, <code>Admin</code> — each subtype has its own table with <code>PersonId</code> FK back to <code>Person</code>; <code>PersonRole</code> enforces which roles a person holds. (2) <code>Proctoring.Action</code> is generalized into <code>KeystrokeAction</code>, <code>FocusChangeAction</code>, <code>ClipboardAction</code> using the <strong>PK = FK pattern</strong> — each subtype's PK is also a FK to <code>Action.ActionId</code>. Both are <strong>disjoint</strong> specializations (the <code>d</code> in the ERD).</p>
+<p><strong>Q: Why is <code>Result</code> 1:1 with <code>Attempt</code>?</strong>
+A: A single attempt produces exactly one final result. We enforce it with <code>UNIQUE(AttemptId)</code> on <code>Result</code>. Score overrides are separate (one attempt can have many overrides over time); the latest one is applied via <code>TR_ScoreOverride_AfterInsert_SyncResult</code>.</p>
+<p><strong>Q: How are similarity duplicates prevented?</strong>
+A: <code>CHK_SimilarityComparison_Order CHECK (Attempt1Id &lt; Attempt2Id)</code> plus <code>UNIQUE(Attempt1Id, Attempt2Id)</code> — so we always store the pair in canonical order, never <code>(B, A)</code>.</p>
+<p><strong>Q: How is capacity enforced?</strong>
+A: Combination of the <code>Capacity</code> column on <code>CourseOffering</code> plus the stored procedure <code>usp_EnrollStudentInCourseOffering</code>, which counts non-<code>DROPPED</code> enrollments under <code>UPDLOCK, HOLDLOCK</code>, then either enrolls or waitlists. The trigger <code>TR_Enrollment_AfterInsert_CleanupWaitlist</code> then removes the student from the waitlist if they're enrolled directly.</p>
+<p><strong>Q: Where does negative marking live?</strong>
+A: Two levels. (1) Per-question: <code>Question.NegativeMarks</code> (CHECK ≤ 0). (2) Per-exam: <code>Exam.NegativeMarking</code> BIT — the exam can choose to honour question-level negative marks or not.</p>
+<p><strong>Q: Why do triggers also write to AuditLog and Notification?</strong>
+A: The description requires the system to be auditable and to keep the student informed. Putting the cross-cutting work in triggers means it happens automatically regardless of whether the row was inserted through a stored procedure, an ORM, or a manual SQL session.</p>
+<p><strong>Q: Is everything in the description actually modelled?</strong>
+A: Yes. The mapping table in §4 covers each business rule from the description to its ERD relationship and its physical implementation. Audit/Notification are inferred from &quot;compliance&quot; and &quot;the student is notified&quot; implications.</p>
+<p><strong>Q: What's a weakness of the design?</strong>
+A: Honestly: (1) <code>PostDeployment.sql</code> has bracket typos and would not deploy cleanly — <code>DummyInserts.sql</code> is the working one. (2) <code>Identity.Person</code> is a supertype but disjointness across <code>Student</code>/<code>Instructor</code>/<code>Admin</code> is enforced by convention (PersonRole) rather than by a hard DB constraint; the same <code>PersonId</code> could be inserted into multiple subtype tables. (3) Several <code>Status</code> columns use VARCHAR with no CHECK enumeration (<code>Enrollment.Status</code>, <code>CourseOffering.Status</code>, <code>Exam.Status</code>, <code>Appeal.Status</code>); we rely on application code. Worth fixing if asked.</p>
+<hr>
+<h2 id="10-quick-index">10. Quick Index</h2>
+<ul>
+<li><strong>Schemas:</strong> <a href="Security/Schemas.sql">Security/Schemas.sql</a></li>
+<li><strong>Project file:</strong> <a href="AegisExam.sqlproj">AegisExam.sqlproj</a></li>
+<li><strong>Identity:</strong> <a href="Identity/Tables/">Identity/Tables/</a></li>
+<li><strong>Academic:</strong> <a href="Academic/Tables/">Academic/Tables/</a>, <a href="Academic/Views/">Academic/Views/</a>, <a href="Academic/StoredProcedures/">Academic/StoredProcedures/</a>, <a href="Academic/Triggers/">Academic/Triggers/</a></li>
+<li><strong>QuestionBank:</strong> <a href="QuestionBank/Tables/">QuestionBank/Tables/</a></li>
+<li><strong>Exam:</strong> <a href="Exam/Tables/">Exam/Tables/</a>, <a href="Exam/Views/">Exam/Views/</a>, <a href="Exam/StoredProcedures/">Exam/StoredProcedures/</a>, <a href="Exam/Triggers/">Exam/Triggers/</a></li>
+<li><strong>Proctoring:</strong> <a href="Proctoring/Tables/">Proctoring/Tables/</a>, <a href="Proctoring/Views/">Proctoring/Views/</a>, <a href="Proctoring/StoredProcedures/">Proctoring/StoredProcedures/</a>, <a href="Proctoring/Triggers/">Proctoring/Triggers/</a></li>
+<li><strong>Disciplinary:</strong> <a href="Disciplinary/Tables/">Disciplinary/Tables/</a>, <a href="Disciplinary/Views/">Disciplinary/Views/</a>, <a href="Disciplinary/StoredProcedures/">Disciplinary/StoredProcedures/</a>, <a href="Disciplinary/Triggers/">Disciplinary/Triggers/</a></li>
+<li><strong>Notification:</strong> <a href="Notification/Tables/Notification.sql">Notification/Tables/Notification.sql</a></li>
+<li><strong>Audit:</strong> <a href="Audit/Tables/AuditLog.sql">Audit/Tables/AuditLog.sql</a></li>
+<li><strong>Dummy data:</strong> <a href="Scripts/Script.DummyInserts.sql">Scripts/Script.DummyInserts.sql</a></li>
+</ul>
+
+            
+            
+        </body>
+        </html>
